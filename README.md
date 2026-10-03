@@ -140,8 +140,10 @@ Các bạn cần chuẩn bị môi trường Python `>= 3.11` và cài các pack
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install langchain langgraph langchain-openai langchain-google-genai langchain-anthropic langchain-ollama langchain-openrouter python-dotenv tabulate pytest
+python -m pip install -r requirements.txt
 ```
+
+Trên Windows PowerShell, kích hoạt môi trường bằng `.\.venv\Scripts\Activate.ps1`.
 
 Nếu muốn chạy chế độ live với LLM thật, hãy tạo file `.env` ở root repo (đã nằm trong `.gitignore`). Tên biến môi trường do các bạn quyết định khi viết `load_config()`. Ví dụ:
 
@@ -180,5 +182,6 @@ Nếu các bạn là giảng viên hoặc reviewer:
 
 - `Guide.md`: hướng dẫn từng bước để hoàn thành lab
 - `Rubric.md`: tiêu chí chấm điểm và bonus
+- `RESULTS.md`: kết quả benchmark offline và phân tích trade-off sau khi hoàn thiện scaffold
 
 Track này được thiết kế để các bạn không chỉ “dùng agent”, mà còn bắt đầu nghĩ như một người thiết kế **memory system** cho agent production.
